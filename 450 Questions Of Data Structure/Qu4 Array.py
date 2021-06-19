@@ -67,6 +67,37 @@ def sort012(arr,n):
 list1 = [0,2,1,0,2]
 sort012(list1,5) # jo argument hum pass kringe usme ye operation perform krega and then hume wo 
                  # aur us argument m function k operation k hisab se change milinge jaise list1 
-                 # m change ho jayega wo sorted hoga.
+                 # m change ho jayega wo sorted hoga. 
 print("method 2nd")
 print(list1)
+
+def sort012(arr,n):
+
+    if n == 1:
+        return arr
+    arr1 = arr[:]
+    arr2 = arr[:]
+    arr3 = arr[:]
+    for item in arr1:
+        if item == 0:
+            arr.insert(0,0)
+    
+    for item in arr2:
+        if item == 1:
+            arr.insert(0,1)
+   
+    for item in arr3:
+        if item == 2:
+            arr.insert(0,2)
+
+    
+    for i in range(n):
+        arr.pop()
+    
+    arr.reverse()
+    
+list1 = [0,2,1,0,2]
+sort012(list1,5)
+print("method 3rd")
+print(list1)
+
